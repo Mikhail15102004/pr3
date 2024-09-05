@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1:Анимация</title>
+<style>
+    #animated {
+        width: 100px;
+        height: 100px;
+        background-color: lightblue;
+        border: 2px solid darkblue; 
+        margin: 20px;
+        transition: all 1.5s ease; /* Переход для всех свойств */
+    }
+    #animated.expanded {
+        width: 200px;
+        height: 200px;
+        border-width: 10px;
+    }
+</style>
+</head>
+<body>
+
+<button id="startAnimation">Квадрат</button>
+<div id="animated"></div>
+
+<script>
+    document.getElementById("startAnimation").addEventListener("click", function() {
+        document.getElementById("animated").classList.toggle("expanded");
+    });
+</script>
+
+</body>
+</html>
